@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xqf.mapper.CinemaMapper">
+
+    <resultMap id="BaseResultMap" type="com.xqf.domain.entity.Cinema">
+            <id property="cinemaId" column="cinema_id" jdbcType="OTHER"/>
+            <result property="cinemaName" column="cinema_name" jdbcType="VARCHAR"/>
+            <result property="cinemaPhone" column="cinema_phone" jdbcType="VARCHAR"/>
+            <result property="province" column="province" jdbcType="VARCHAR"/>
+            <result property="city" column="city" jdbcType="VARCHAR"/>
+            <result property="county" column="county" jdbcType="VARCHAR"/>
+            <result property="specifiedAddress" column="specified_address" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        cinema_id,cinema_name,cinema_phone,
+        province,city,county,
+        specified_address
+    </sql>
+</mapper>

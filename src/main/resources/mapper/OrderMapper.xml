@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xqf.mapper.OrderMapper">
+
+    <resultMap id="BaseResultMap" type="com.xqf.domain.entity.Order">
+            <id property="orderId" column="order_id" jdbcType="OTHER"/>
+            <result property="userId" column="user_id" jdbcType="OTHER"/>
+            <result property="scheduleId" column="schedule_id" jdbcType="OTHER"/>
+            <result property="orderPhone" column="order_phone" jdbcType="VARCHAR"/>
+            <result property="orderDate" column="order_date" jdbcType="VARCHAR"/>
+            <result property="ticketNum" column="ticket_num" jdbcType="OTHER"/>
+            <result property="ticketTotalPrice" column="ticket_total_price" jdbcType="DECIMAL"/>
+            <result property="orderSeatInfo" column="order_seat_info" jdbcType="VARCHAR"/>
+            <result property="payType" column="pay_type" jdbcType="VARCHAR"/>
+            <result property="phoneCode" column="phone_code" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        order_id,user_id,schedule_id,
+        order_phone,order_date,ticket_num,
+        ticket_total_price,order_seat_info,pay_type,
+        phone_code
+    </sql>
+</mapper>
